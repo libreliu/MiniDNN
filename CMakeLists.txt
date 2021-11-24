@@ -12,3 +12,6 @@ target_link_libraries(MiniDNN_test1 MiniDNN eigen3)
 
 add_executable(MiniDNN_test2 ${CMAKE_CURRENT_SOURCE_DIR}/tutorials/test2/test2.cpp)
 target_link_libraries(MiniDNN_test2 MiniDNN eigen3)
+
+add_executable(MiniDNN_test_nrc ${CMAKE_CURRENT_SOURCE_DIR}/tutorials/test_nrc/test1.cpp)
+target_link_libraries(MiniDNN_test_nrc MiniDNN eigen3)
