@@ -4,6 +4,9 @@ using namespace MiniDNN;
 typedef Eigen::MatrixXd Matrix;
 typedef Eigen::VectorXd Vector;
 
+void printMatrix(Matrix &mat, std::string fileName) {
+    
+}
 
 int main()
 {
@@ -59,14 +62,18 @@ int main()
     net.fit(opt, x, y, 1000, 1000, 000);
     // Obtain prediction -- each column is an observation
     Matrix pred = net.predict(xt);
-    // Export the network to the NetFolder folder with prefix NetFile
-    net.export_net("./NetFolder/", "NetFile");
-    // Create a new network
-    Network netFromFile;
-    // Read structure and paramaters from file
-    netFromFile.read_net("./NetFolder/", "NetFile");
-    // Test that they give the same prediction
-    std::cout << (pred - netFromFile.predict(xt)).norm() << std::endl;
+
+    
+
+    // // Export the network to the NetFolder folder with prefix NetFile
+    // net.export_net("./NetFolder/", "NetFile");
+    // // Create a new network
+    // Network netFromFile;
+    // // Read structure and paramaters from file
+    // netFromFile.read_net("./NetFolder/", "NetFile");
+    // // Test that they give the same prediction
+    // std::cout << (pred - netFromFile.predict(xt)).norm() << std::endl;
+
     // Layer objects will be freed by the network object,
     // so do not manually delete them
     return 0;
