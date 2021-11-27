@@ -63,7 +63,7 @@ class Network
                 }
             }
         }
-
+    public:
         // Let each layer compute its output
         void forward(const Matrix& input)
         {
